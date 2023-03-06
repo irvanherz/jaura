@@ -1,27 +1,3 @@
-# jaura
-Fast, opinionated, minimalist framework for building server-side applications on top of C++
-
-## Overview
-Jaura is a very simple C++ server-side application framework built on top of libhttpd. Jaura implementation is header-only in single header file that simplifies integration with any project. Inspired by NestJS and ASP.NET, but with simpler, easier and comprehensive API.
-
-## Features
-- [x] Flexible and easy-to-use API
-- [x] Single thread per request
-- [x] Cross-platform
-- [x] RESTful oriented interface
-- [ ] Support for middleware/action filter
-- [ ] Support for dependency injection
-- [ ] Support for authentication
-- [ ] Support for easy database integration
-
-## Dependencies
-Jaura requires C++ 11. It does not have any platform specific dependency, but depends on **libmicrohttpd** library.
-
-## Getting Started
-This basic example demonstrating how to handle request using specific routes:
-
-```cpp
-
 #include "jaura.hpp"
 
 using namespace Jaura;
@@ -78,5 +54,3 @@ int main() {
   app->registerModule((HttpModule *)appModule);
   app->listen(8000);
 }
-```
-
